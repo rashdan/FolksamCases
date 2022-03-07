@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Klc-k2-vmG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Case View Controller-->
+        <scene sceneID="pZW-fc-c8W">
+            <objects>
+                <viewController id="Klc-k2-vmG" customClass="AddCaseViewController" customModule="FolksamApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qqZ-OS-YyD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zoP-Ct-vZQ">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nytt ärende" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGy-0i-pgO">
+                                <rect key="frame" x="20" y="44" width="374" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="KGK-WG-g1I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B3P-U5-cPq">
+                                <rect key="frame" x="20" y="136" width="374" height="126"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="W1w-vn-Ms7"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iK6-YY-pLf" customClass="FolksamButton" customModule="FolksamApp" customModuleProvider="target">
+                                <rect key="frame" x="101" y="270" width="212" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lwf-Sm-X6E"/>
+                                    <constraint firstAttribute="width" constant="212" id="YAN-Go-0Ma"/>
+                                </constraints>
+                                <state key="normal" title="Skicka"/>
+                                <connections>
+                                    <action selector="submit:" destination="Klc-k2-vmG" eventType="touchUpInside" id="3KB-MV-hIb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3HG-bg-LKW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iK6-YY-pLf" firstAttribute="centerX" secondItem="3HG-bg-LKW" secondAttribute="centerX" id="0mo-IG-1CP"/>
+                            <constraint firstItem="3HG-bg-LKW" firstAttribute="trailing" secondItem="B3P-U5-cPq" secondAttribute="trailing" constant="20" id="5nX-9i-sqP"/>
+                            <constraint firstItem="zoP-Ct-vZQ" firstAttribute="top" secondItem="SGy-0i-pgO" secondAttribute="bottom" constant="8" id="7J1-8z-DtW"/>
+                            <constraint firstItem="SGy-0i-pgO" firstAttribute="top" secondItem="3HG-bg-LKW" secondAttribute="top" id="G4z-Jk-u6u"/>
+                            <constraint firstItem="B3P-U5-cPq" firstAttribute="top" secondItem="zoP-Ct-vZQ" secondAttribute="bottom" constant="8" symbolic="YES" id="KMb-cP-des"/>
+                            <constraint firstItem="SGy-0i-pgO" firstAttribute="leading" secondItem="3HG-bg-LKW" secondAttribute="leading" constant="20" id="LcL-3C-hrh"/>
+                            <constraint firstItem="3HG-bg-LKW" firstAttribute="trailing" secondItem="SGy-0i-pgO" secondAttribute="trailing" constant="20" id="QF3-BY-vdr"/>
+                            <constraint firstItem="iK6-YY-pLf" firstAttribute="top" secondItem="B3P-U5-cPq" secondAttribute="bottom" constant="8" symbolic="YES" id="UHz-di-O39"/>
+                            <constraint firstItem="zoP-Ct-vZQ" firstAttribute="leading" secondItem="SGy-0i-pgO" secondAttribute="leading" id="lCw-qZ-fcw"/>
+                            <constraint firstItem="3HG-bg-LKW" firstAttribute="trailing" secondItem="zoP-Ct-vZQ" secondAttribute="trailing" constant="20" id="rN5-IV-mEZ"/>
+                            <constraint firstItem="B3P-U5-cPq" firstAttribute="leading" secondItem="zoP-Ct-vZQ" secondAttribute="leading" id="xur-J6-Hkw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descTextView" destination="B3P-U5-cPq" id="hdp-M7-C9X"/>
+                        <outlet property="titleTextField" destination="zoP-Ct-vZQ" id="CWx-NI-h3U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J64-dO-PKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
