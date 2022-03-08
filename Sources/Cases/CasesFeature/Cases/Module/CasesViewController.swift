@@ -7,6 +7,7 @@
 
 import FolksamCommon
 import UIKit
+import Foundation
 
 public class CasesViewController: UIViewController {
     private var casesData: [Case]!
@@ -20,7 +21,7 @@ public class CasesViewController: UIViewController {
     }
 
     public static func make(apiService: CaseServiceProtocol) -> UINavigationController {
-        let storyboard = UIStoryboard(name: "CasesTab", bundle: Bundle(for: Self.self))
+        let storyboard = UIStoryboard(name: "CasesTab", bundle: Bundle.module)
         let (navigationController, viewController) = UIStoryboard.instantiateNavigationController(
             from: storyboard,
             childOfType: self

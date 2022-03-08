@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class AddCaseViewController: UIViewController {
     @IBOutlet var titleTextField: UITextField!
@@ -21,7 +22,7 @@ class AddCaseViewController: UIViewController {
     }
 
     static func make(apiService: CaseServiceProtocol) -> AddCaseViewController {
-        let storyboard = UIStoryboard(name: "AddCase", bundle: Bundle(for: Self.self))
+        let storyboard = UIStoryboard(name: "AddCase", bundle: Bundle.module)
         let viewController = UIStoryboard.instantiateViewController(from: storyboard, ofType: self)
         viewController.apiService = apiService
         return viewController

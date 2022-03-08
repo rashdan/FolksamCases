@@ -7,6 +7,7 @@
 
 import FolksamCommon
 import UIKit
+import Foundation
 
 class CaseDetailsViewController: UIViewController {
     @IBOutlet var descTextView: UITextView!
@@ -23,7 +24,7 @@ class CaseDetailsViewController: UIViewController {
     }
 
     static func make(details: Case) -> CaseDetailsViewController {
-        let storyboard = UIStoryboard(name: "CaseDetails", bundle: Bundle(for: Self.self))
+        let storyboard = UIStoryboard(name: "CaseDetails", bundle: Bundle.module)
         let vc = UIStoryboard.instantiateViewController(from: storyboard, ofType: self)
         vc.details = details
 //        viewController.apiService = apiService

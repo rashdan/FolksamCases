@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class CasesTableViewController: UITableViewController {
     private var casesData: [Case] = []
@@ -20,7 +21,7 @@ class CasesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "CaseTableViewCell", bundle: Bundle(for: Self.self)), forCellReuseIdentifier: "caseCell")
+        tableView.register(UINib(nibName: "CaseTableViewCell", bundle: Bundle.module), forCellReuseIdentifier: "caseCell")
 
         // TODO:
         // refresh jumps and disappears, something to do with constraints for containerview+tableview etc
